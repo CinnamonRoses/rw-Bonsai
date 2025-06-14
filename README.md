@@ -3,4 +3,4 @@ Bonsai is a sleek and modern responsive website concept built with HTML, CSS, an
 
 ## 🌐 Live Preview
 ### Explore the live version here:
-🔗 rw-bonsai.vercel.app
+🔗 [https://rw-bonsai.vercel.app](https://rw-bonsai.vercel.app/)
