@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Responsive Website - Bonsai</title>
+    </head>
+<body>
+    <div class="page__holder">
+        <div class="mobile-nav">
+            <!-- Root Menu -->
+            <div class="mobile-nav__slide active" id="nav-root">
+                <div class="mobile-nav__section mobile-nav__section--root">
+                <button class="mobile-nav__btn mobile-nav__btn--dropdown" data-target="nav-product">Product <i class="fa-solid fa-caret-right mobile-nav__btn-caret"></i></button>
+                <button class="mobile-nav__btn mobile-nav__btn--dropdown" data-target="nav-templates">Templates <i class="fa-solid fa-caret-right mobile-nav__btn-caret"></i></button>
+                <button class="mobile-nav__btn">Pricing</button>
+                <button class="mobile-nav__btn">Reviews</button>
+            
+                <div class="mobile-nav__section mobile-nav__section--bottom">
+                    <button class="header__btn header__btn--login header__btn--mobile">LOG IN</button>
+                    <button class="header__btn header__btn--start header__btn--mobile">START FREE</button>
+                </div>
+                </div>
+            </div>
+            
+            <!-- Product Level 1 -->
+            <div class="mobile-nav__slide" id="nav-product">
+                <div class="mobile-nav__section mobile-nav__level">
+                <button class="mobile-nav__btn mobile-nav__btn--back" data-target="nav-root">← Back</button>
+            
+                <button class="mobile-nav__btn mobile-nav__btn--dropdown" data-target="nav-product2">
+                    <div class="mobile-nav__dropdown-text">
+                    <span class="mobile-nav__product-title">Bonsai Workflow</span>
+                    <span class="mobile-nav__product-subtitle">Organize your business & look professional</span>
+                    </div>
+                    <i class="fa-solid fa-caret-right mobile-nav__btn-caret"></i>
+                </button>
+            
+                <button class="mobile-nav__btn mobile-nav__btn--product">
+                    <span class="mobile-nav__product-title">Bonsai Tax</span>
+                    <span class="mobile-nav__product-subtitle">Maximize write-offs, and estimate and save for 1099 taxes</span>
+                </button>
+            
+                <button class="mobile-nav__btn mobile-nav__btn--product">
+                    <span class="mobile-nav__product-title">Bonsai Cash</span>
+                    <span class="mobile-nav__product-subtitle">Manage your money with a no-fee business account</span>
+                </button>
+                </div>
+            </div>
+            
+            <!-- Product Level 2 -->
+            <div class="mobile-nav__slide" id="nav-product2">
+                <div class="mobile-nav__section mobile-nav__level">
+                <button class="mobile-nav__btn mobile-nav__btn--back" data-target="nav-product">← Back</button>
+                <button class="mobile-nav__btn"><i class="fa-solid fa-file-invoice-dollar mobile-nav__btn-icon"></i>Invoices</button>
+                <button class="mobile-nav__btn"><i class="fa-solid fa-file-pen mobile-nav__btn-icon"></i>Proposals</button>
+                <button class="mobile-nav__btn"><i class="fa-solid fa-scroll mobile-nav__btn-icon"></i>Contracts</button>
+                <button class="mobile-nav__btn"><i class="fa-solid fa-people-roof mobile-nav__btn-icon"></i>Client CRM</button>
+                <button class="mobile-nav__btn"><i class="fa-solid fa-file-export mobile-nav__btn-icon"></i>Forms and Automations</button>
+                <button class="mobile-nav__btn"><i class="fa-solid fa-clock mobile-nav__btn-icon"></i>Time Tracking</button>
+                <button class="mobile-nav__btn"><i class="fa-solid fa-file-invoice-dollar mobile-nav__btn-icon"></i>Accounting</button>
+                <button class="mobile-nav__btn"><i class="fa-solid fa-list-check mobile-nav__btn-icon"></i>Task Tracking</button>
+                </div>
+            </div>
+            
+            <!-- Templates (1 level) -->
+            <div class="mobile-nav__slide" id="nav-templates">
+                <div class="mobile-nav__section mobile-nav__level">
+                <button class="mobile-nav__btn mobile-nav__btn--back" data-target="nav-root">← Back</button>
+                <button class="mobile-nav__btn"><i class="fa-solid fa-file-lines mobile-nav__btn-icon"></i>Contract Templates</button>
+                <button class="mobile-nav__btn"><i class="fa-solid fa-file-lines mobile-nav__btn-icon"></i>Proposal Templates</button>
+                <button class="mobile-nav__btn"><i class="fa-solid fa-file-invoice-dollar mobile-nav__btn-icon"></i>Invoice Templates</button>
+                <button class="mobile-nav__btn"><i class="fa-solid fa-file-lines mobile-nav__btn-icon"></i>Agreement Templates</button>
+                <button class="mobile-nav__btn"><i class="fa-solid fa-file-lines mobile-nav__btn-icon"></i>Quote Templates</button>
+                <button class="mobile-nav__btn"><i class="fa-solid fa-clock mobile-nav__btn-icon"></i>Scope of Work Templates</button>
+                </div>
+            </div>
+        </div>          
+        <div class="page__background-shape"></div>
+        <header class="header">
+            <div class="header__container">
+                <div class="header__logo">
+                    <a href="#">
+                        <img src="./images/bonsai-logo.svg" alt="bonsai logo" class="header__logo-image">
+                        <img class="mobile-nav__logo" src="./images/nav__icon--mobile.svg" alt="bonsai logo">
+                    </a>
+                </div>
+                <div class="mobile-nav__open">
+                    <input type="checkbox" id="mobileNavBtn" class="mobile-nav__open-box">
+                    <label for="mobileNavBtn" class="mobile-nav__open-btn"></label>
+                </div>
+                <div class="navbar">
+                    <div class="navbar__dropdown-product">
+                        <button class="product__drop-btn">
+                          Product
+                          <i class="fa-solid fa-caret-down drop-btn__caret"></i>
+                        </button>
+                        <div class="product-drop-items">
+                            <!-- First Level -->
+                            <div class="product__drop-one">
+                                <button class="product__drop-one-btn">
+                                    <div class="drop-one__content border-bottom">
+                                    <span class="drop-item__title">Bonsai Workflow</span>
+                                    <span class="drop-item__desc">Look professional, win more clients and manage your business from one place</span>
+                                    </div>
+                                    <i class="fa-solid fa-caret-right drop-one__caret"></i>
+                                </button>
+                            </div>
+    
+                            <div class="product__drop-one">
+                                <button class="product__drop-one-btn">
+                                    <div class="drop-one__content border-bottom">
+                                    <span class="drop-item__title">Bonsai Tax</span>
+                                    <span class="drop-item__desc">
+                                        Track expenses, maximize tax write-offs, and estimate taxes without the headache
+                                    </span>
+                                    </div>
+                                </button>
+                            </div>
+    
+                            <div class="product__drop-one">
+                                <button class="product__drop-one-btn">
+                                    <div class="drop-one__content">
+                                    <span class="drop-item__title">Bonsai Cash</span>
+                                    <span class="drop-item__desc">
+                                        Bonsai's all-in-one financial hub: No fees and lightning fast payouts
+                                    </span>
+                                    </div>
+                                </button>
+                            </div>
+                      
+                            <!-- Second Level Dropdown -->
+                            <div class="product__drop-two">
+                                <a href="#" class="drop-two__item">
+                                    <i class="fa-solid fa-file-invoice-dollar drop-two-item__icon"></i>
+                                    <div class="drop-two-item__text">
+                                        <span class="drop-two-item__title">Invoices</span>
+                                        <span class="drop-two-item__desc">Get paid faster with automatic invoicing, online payments and more</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="drop-two__item">
+                                    <i class="fa-solid fa-file-pen drop-two-item__icon"></i>
+                                    <div class="drop-two-item__text">
+                                        <span class="drop-two-item__title">Proposals</span>
+                                        <span class="drop-two-item__desc">Create client-winning proposals with open receipts, custom packages and electronic approvals</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="drop-two__item">
+                                    <i class="fa-solid fa-scroll drop-two-item__icon"></i>
+                                    <div class="drop-two-item__text">
+                                        <span class="drop-two-item__title">Contracts</span>
+                                        <span class="drop-two-item__desc">Protect your business with fully-customizable contract templates. Edit and e-sign hassle free.</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="drop-two__item">
+                                    <i class="fa-solid fa-people-roof drop-two-item__icon"></i>
+                                    <div class="drop-two-item__text">
+                                        <span class="drop-two-item__title">Client CRM</span>
+                                        <span class="drop-two-item__desc">Add leads, manage existing clients and track projects easily from one place</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="drop-two__item">
+                                    <i class="fa-solid fa-file-export drop-two-item__icon"></i>
+                                    <div class="drop-two-item__text">
+                                        <span class="drop-two-item__title">Forms & Automations</span>
+                                        <span class="drop-two-item__desc">Boost client intake and automate feedback with custom web forms and questionnaires</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="drop-two__item">
+                                    <i class="fa-solid fa-clock drop-two-item__icon"></i>
+                                    <div class="drop-two-item__text">
+                                        <span class="drop-two-item__title">Time Tracking</span>
+                                        <span class="drop-two-item__desc">Stay organized with Bonsai's all-in-one time tracker, automated timesheets and billing system</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="drop-two__item">
+                                    <i class="fa-solid fa-file-invoice-dollar drop-two-item__icon"></i>
+                                    <div class="drop-two-item__text">
+                                        <span class="drop-two-item__title">Accounting</span>
+                                        <span class="drop-two-item__desc">Manage your finances easily with income reports, expense tracking, tax reminders and more</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="drop-two__item">
+                                    <i class="fa-solid fa-list-check drop-two-item__icon"></i>
+                                    <div class="drop-two-item__text">
+                                        <span class="drop-two-item__title">Task Tracking</span>
+                                        <span class="drop-two-item__desc">Stress-free task management with project templates and integrated timesheets</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="navbar__dropdown-template">
+                        <button class="template__drop-btn">
+                        Templates
+                        <i class="fa-solid fa-caret-down drop-btn__caret"></i>
+                        </button>
+                        <div class="template-drop-items" data-active-index="1">
+                            <div class="template-drop__left">
+                                <button class="template-drop__left-btn">
+                                    <div class="template-drop__title-container">
+                                        <i class="fa-solid fa-file-lines template-drop__icon"></i>
+                                        Contract Templates
+                                    </div>
+                                    <i class="fa-solid fa-caret-right template-drop__caret"></i>
+                                </button>
+                                <button class="template-drop__left-btn">
+                                    <div class="template-drop__title-container">
+                                        <i class="fa-solid fa-file-lines template-drop__icon"></i>
+                                        Proposal Templates
+                                    </div>
+                                    <i class="fa-solid fa-caret-right template-drop__caret"></i>
+                                </button>
+                                <button class="template-drop__left-btn">
+                                    <div class="template-drop__title-container">
+                                        <i class="fa-solid fa-file-invoice-dollar template-drop__icon"></i>
+                                        Invoice Templates
+                                    </div>
+                                    <i class="fa-solid fa-caret-right template-drop__caret"></i>
+                                </button>
+                                <button class="template-drop__left-btn">
+                                    <div class="template-drop__title-container">
+                                        <i class="fa-solid fa-file-lines template-drop__icon"></i>
+                                        Agreement Templates
+                                    </div>
+                                    <i class="fa-solid fa-caret-right template-drop__caret"></i>
+                                </button>
+                                <button class="template-drop__left-btn">
+                                    <div class="template-drop__title-container">
+                                        <i class="fa-solid fa-file-lines template-drop__icon"></i>
+                                        Quote Templates
+                                    </div>
+                                    <i class="fa-solid fa-caret-right template-drop__caret"></i>
+                                </button>
+                                <button class="template-drop__left-btn">
+                                    <div class="template-drop__title-container">
+                                        <i class="fa-solid fa-clock template-drop__icon"></i>
+                                        Scope of Work Templates
+                                    </div>
+                                    <i class="fa-solid fa-caret-right template-drop__caret"></i>
+                                </button>
+                                <button class="template-drop__left-btn">
+                                    <div class="template-drop__title-container">
+                                        <i class="fa-solid fa-file-lines template-drop__icon"></i>
+                                        Brief Templates
+                                    </div>
+                                    <i class="fa-solid fa-caret-right template-drop__caret"></i>
+                                </button>
+                            </div>
+                    
+                            <div class="template-drop__right">
+                                <div class="template-drop__right-content">
+                                    <h3 class="template-drop__title">Featured Contract Templates</h3>
+                                    <div class="template-drop__buttons">
+                                        <button class="template-drop__right-btn">Free Contract Maker</button>
+                                        <button class="template-drop__right-btn">Social Media Management Contract Template</button>
+                                        <button class="template-drop__right-btn">Graphic Design Contract Template</button>
+                                        <button class="template-drop__right-btn">Digital Marketing Contract Template</button>
+                                    </div>
+                                    <a href="#" class="template-drop__link">See All Templates</a>
+                                </div>
+                        
+                                <div class="template-drop__right-content">
+                                    <h3 class="template-drop__title">Featured Proposal Templates</h3>
+                                    <div class="template-drop__buttons">
+                                        <button class="template-drop__right-btn">Graphic Design Proposal Template</button>
+                                        <button class="template-drop__right-btn">Business Proposal Template</button>
+                                        <button class="template-drop__right-btn">Brand Ambassador Proposal Template</button>
+                                        <button class="template-drop__right-btn">Data Entry Proposal Letter Template</button>
+                                    </div>
+                                    <a href="#" class="template-drop__link">See All Templates</a>
+                                </div>
+                        
+                                <div class="template-drop__right-content">
+                                    <h3 class="template-drop__title">Featured Invoice Templates</h3>
+                                    <div class="template-drop__buttons">
+                                        <button class="template-drop__right-btn">Social Media Invoice Templates</button>
+                                        <button class="template-drop__right-btn">Contractor Invoice Template</button>
+                                        <button class="template-drop__right-btn">Web Design Invoice Template</button>
+                                        <button class="template-drop__right-btn">Influencer Invoice Template</button>
+                                    </div>
+                                    <a href="#" class="template-drop__link">See All Templates</a>
+                                </div>
+                        
+                                <div class="template-drop__right-content">
+                                    <h3 class="template-drop__title">Featured Agreement Templates</h3>
+                                    <div class="template-drop__buttons">
+                                        <button class="template-drop__right-btn">Influencer Agreement Template</button>
+                                        <button class="template-drop__right-btn">Influencer Collaboration Agreement Template</button>
+                                        <button class="template-drop__right-btn">Monthly Retainer Agreement Template</button>
+                                        <button class="template-drop__right-btn">Writer Agreement Template</button>
+                                    </div>
+                                    <a href="#" class="template-drop__link">See All Templates</a>
+                                </div>
+                        
+                                <div class="template-drop__right-content">
+                                    <h3 class="template-drop__title">Featured Quote Templates</h3>
+                                    <div class="template-drop__buttons">
+                                        <button class="template-drop__right-btn">Web Design Quotation Template</button>
+                                        <button class="template-drop__right-btn">Interior Design Quotation Template</button>
+                                        <button class="template-drop__right-btn">Digital Marketing Quotation Template</button>
+                                        <button class="template-drop__right-btn">Video Production Quotation Template</button>
+                                    </div>
+                                    <a href="#" class="template-drop__link">See All Templates</a>
+                                </div>
+                        
+                                <div class="template-drop__right-content">
+                                    <h3 class="template-drop__title">Featured Scope of Work Templates</h3>
+                                    <div class="template-drop__buttons">
+                                        <button class="template-drop__right-btn">Website Development Scope of Work Template</button>
+                                        <button class="template-drop__right-btn">Digital Marketing Scope of Work Template</button>
+                                        <button class="template-drop__right-btn">Consultant Scope of Work Template</button>
+                                        <button class="template-drop__right-btn">Interior Design Scope of Work Template</button>
+                                    </div>
+                                    <a href="#" class="template-drop__link">See All Templates</a>
+                                </div>
+                        
+                                <div class="template-drop__right-content">
+                                    <h3 class="template-drop__title">Featured Brief Templates</h3>
+                                    <div class="template-drop__buttons">
+                                        <button class="template-drop__right-btn">Design Brief Template</button>
+                                        <button class="template-drop__right-btn">Architecture Design Brief</button>
+                                        <button class="template-drop__right-btn">Fashion Design Brief</button>
+                                        <button class="template-drop__right-btn">Creative Brief Template</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                  
+                    <button href="#" class="navbar__btn">Pricing</button>
+                    <button href="#" class="navbar__btn">Reviews</button>
+                    <div class="header__btns">
+                        <button class="header__btn header__btn--login">LOG IN</button>
+                        <button class="header__btn header__btn--start">START FREE</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="main__container">
+                <section class="pricing">
+                    <div class="pricing__title-container">
+                        <h1 class="pricing__title">Plans & Pricing</h1>
+                        <div class="pricing__toggle-container">
+                            <p class="toggle-container__text toggle-container__text--active">Monthly</p>
+                            <div class="toggle-container__toggle-switch">
+                                <label class="toggle-switch__label">
+                                    <input type="checkbox">
+                                    <span class="toggle-switch__slider"></span>
+                                </label>
+                            </div>
+                            <p class="toggle-container__text">Yearly</p>
+                        </div>
+                        <img src="./images/two-month-free.svg" alt="2 months free image" class="pricing__offer-img">
+                    </div>
+                    <!-- Monthly Pricing Cards -->
+                    <div class="pricing__card-container pricing__card-container--monthly">
+                        <article class="pricing__card">
+                            <h2 class="pricing__card-title">Starter</h2>
+                            <p class="pricing__card-subtitle">Ideal for freelancers and contractors just starting out.</p>
+                            <div class="pricing__card-price-box">
+                                <div class="pricing__card-price-item">
+                                    <span class="pricing__card-currency">$</span>
+                                    <span class="pricing__card-price">24</span>
+                                    <span class="pricing__card-duration">/month</span>
+                                </div>
+                            </div>
+                            <ul class="pricing__card-benefits">
+                                <li class="pricing__card-benefit">
+                                    <i class="fa-solid fa-check"></i>
+                                    All Templates
+                                </li>
+                                <li class="pricing__card-benefit">
+                                    <i class="fa-solid fa-check"></i>
+                                    Unlimited Clients & Projects
+                                </li>
+                                <li class="pricing__card-benefit">
+                                    <i class="fa-solid fa-check"></i>
+                                    Invoicing & Payments
+                                </li>
+                                <li class="pricing__card-benefit">
+                                    <i class="fa-solid fa-check"></i>
+                                    Proposals & Contracts
+                                </li>
+                                <li class="pricing__card-benefit">
+                                    <i class="fa-solid fa-check"></i>
+                                    Tasks & Time Tracking
+                                </li>
+                                <li class="pricing__card-benefit">
+                                    <i class="fa-solid fa-check"></i>
+                                    Client CRM
+                                </li>
+                                <li class="pricing__card-benefit">
+                                    <i class="fa-solid fa-check"></i>
+                                    Expense Tracking
+                                </li>
+                                <li class="pricing__card-benefit">
+                                    <i class="fa-solid fa-check"></i>
+                                    Up to 5 Project Collaborators
+                                </li>
+                            </ul>
+                            <button class="pricing__card-btn">Start Free</button>
+                        </article>
+                        <article class="pricing__card">
+                            <div class="pricing__card-banner-tag">
+                                <h2 class="pricing__card-title">Professional</h2>
+                                <div class="pricing__card-banner">
+                                    <p class="pricing__card-banner-text">Most Popular</p>
+                                </div>
+                            </div>
+                            <p class="pricing__card-subtitle">Everything a growing independent business needs to thrive.</p>
+                            <div class="pricing__card-price-box">
+                                <div class="pricing__card-price-item">
+                                    <span class="pricing__card-currency">$</span>
+                                    <span class="pricing__card-price">39</span>
+                                    <span class="pricing__card-duration">/month</span>
+                                </div>
+                            </div>
+                            <ul class="pricing__card-benefits">
+                                <li class="pricing__card-benefit">
+                                    <i class="fa-solid fa-check"></i>
+                                    Everything in Starter plus...
+                                </li>
+                                <li class="pricing__card-benefit">
+                                    <i class="fa-solid fa-check"></i>
+                                    Custom Branding
+                                </li>
+                                <li class="pricing__card-benefit">
+                                    <i class="fa-solid fa-check"></i>
+                                    Forms & Questionnaires
+                                </li>
+                                <li class="pricing__card-benefit">
+                                    <i class="fa-solid fa-check"></i>
+                                    Workflow Automations
+                                </li>
+                                <li class="pricing__card-benefit">
+                                    <i class="fa-solid fa-check"></i>
+                                    Client Portal
+                                </li>
+                                <li class="pricing__card-benefit">
+                                    <i class="fa-solid fa-check"></i>
+                                    QuickBooks Integration
+                                </li>
+                                <li class="pricing__card-benefit">
+                                    <i class="fa-solid fa-check"></i>
+                                    Calendly Integration
+                                </li>
+                                <li class="pricing__card-benefit">
+                                    <i class="fa-solid fa-check"></i>
+                                    Zapier Integration
+                                </li>
+                                <li class="pricing__card-benefit">
+                                    <i class="fa-solid fa-check"></i>
+                                    Up to 15 Project Collaborators
+                                </li>
+                            </ul>
+                            <button class="pricing__card-btn">Start Free</button>
+                        </article>
+                        <article class="pricing__card">
+                            <h2 class="pricing__card-title">Business</h2>
+                            <p class="pricing__card-subtitle">The perfect package for small businesses and agencies.</p>
+                            <div class="pricing__card-price-box">
+                                <div class="pricing__card-price-item">
+                                    <span class="pricing__card-currency">$</span>
+                                    <span class="pricing__card-price">79</span>
+                                    <span class="pricing__card-duration">/month</span>
+                                </div>
+                            </div>
+                            <ul class="pricing__card-benefits">
+                                <li class="pricing__card-benefit">
+                                    <i class="fa-solid fa-check"></i>
+                                    Everything in Starter and Professional plus...
+                                </li>
+                                <li class="pricing__card-benefit">
+                                    <i class="fa-solid fa-check"></i>
+                                    Subcontractor Management
+                                </li>
+                                <li class="pricing__card-benefit">
+                                    <i class="fa-solid fa-check"></i>
+                                    Hiring Agreement Templates (1099 contracts)
+                                </li>
+                                <li class="pricing__card-benefit">
+                                    <i class="fa-solid fa-check"></i>
+                                    Subcontractor Onboarding
+                                </li>
+                                <li class="pricing__card-benefit">
+                                    <i class="fa-solid fa-check"></i>
+                                    Talent Pool
+                                </li>
+                                <li class="pricing__card-benefit">
+                                    <i class="fa-solid fa-check"></i>
+                                    3 Team Seats (additional seats $9/month)
+                                </li>
+                                <li class="pricing__card-benefit">
+                                    <i class="fa-solid fa-check"></i>
+                                    Accountant Access
+                                </li>
+                                <li class="pricing__card-benefit">
+                                    <i class="fa-solid fa-check"></i>
+                                    Connect Multiple Bank Accounts
+                                </li>
+                                <li class="pricing__card-benefit">
+                                    <i class="fa-solid fa-check"></i>
+                                    Unlimited Subcontractors
+                                </li>
+                                <li class="pricing__card-benefit">
+                                    <i class="fa-solid fa-check"></i>
+                                    Unlimited Project Collaborators
+                                </li>
+                            </ul>
+                            <button class="pricing__card-btn">Start Free</button>
+                        </article>
+                        <!-- Monthly Card Addons -->
+                        <div class="pricing__card-addons-container">
+                            <h2 class="pricing__card-title pricing__card-title--addons">Super charge your work with add-ons</h2>
+                            <article class="pricing__card pricing__card--addon">
+                                <div class="pricing__card-left">
+                                    <h3 class="pricing__card-title pricing__card-title--addon">Collaborators</h3>
+                                    <p class="pricing__card-subtitle pricing__card-subtitle--addon">Invite other users to specific projects for limited access and functionality.</p>
+                                </div>
+                                <div class="pricing__card-right">
+                                    <p class="pricing__card-price pricing__card-price--addon">Free</p>
+                                </div>
+                            </article>
+                            <article class="pricing__card pricing__card--addon">
+                                <div class="pricing__card-left">
+                                    <h3 class="pricing__card-title pricing__card-title--addon">Partners</h3>
+                                    <p class="pricing__card-subtitle pricing__card-subtitle--addon">Invite other users for full account access and company management.</p>
+                                </div>
+                                <div class="pricing__card-right">
+                                    <p class="pricing__card-price pricing__card-price--addon">$9</p>
+                                    <p class="pricing__card-duration pricing__card-duration--addon">/month</p>
+                                </div>
+                            </article>
+                            <article class="pricing__card pricing__card--addon">
+                                <div class="pricing__card-left">
+                                    <h3 class="pricing__card-title pricing__card-title--addon">Bonsai Tax</h3>
+                                    <p class="pricing__card-subtitle pricing__card-subtitle--addon">Track expenses, identify write-offs, and estimate quarterly taxes easily.</p>
+                                    <a href="#" class="pricing__card-link">Learn More <i class="fa-solid fa-angle-right pricing__card-link-caret"></i></a>
+                                </div>
+                                <div class="pricing__card-right">
+                                    <p class="pricing__card-price pricing__card-price--addon">$10</p>
+                                    <p class="pricing__card-duration pricing__card-duration--addon">/month</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <!-- Yearly Pricing Cards -->
+                    <div class="pricing__card-container pricing__card-container--yearly">
+                        <article class="pricing__card">
+                            <h2 class="pricing__card-title">Starter</h2>
+                            <p class="pricing__card-subtitle">Ideal for freelancers and contractors just starting out.</p>
+                            <div class="pricing__card-price-box">
+                                <div class="pricing__card-price-item">
+                                    <span class="pricing__card-currency">$</span>
+                                    <span class="pricing__card-price">17</span>
+                                    <span class="pricing__card-duration">/month</span>
+                                </div>
+                                <span class="pricing__card-subduration">Billed yearly</span>
+                            </div>
+                            <ul class="pricing__card-benefits">
+                                <li class="pricing__card-benefit">
+                                    <i class="fa-solid fa-check"></i>
+                                    All Templates
+                                </li>
+                                <li class="pricing__card-benefit">
+                                    <i class="fa-solid fa-check"></i>
+                                    Unlimited Clients & Projects
+                                </li>
+                                <li class="pricing__card-benefit">
+                                    <i class="fa-solid fa-check"></i>
+                                    Invoicing & Payments
+                                </li>
+                                <li class="pricing__card-benefit">
+                                    <i class="fa-solid fa-check"></i>
+                                    Proposals & Contracts
+                                </li>
+                                <li class="pricing__card-benefit">
+                                    <i class="fa-solid fa-check"></i>
+                                    Tasks & Time Tracking
+                                </li>
+                                <li class="pricing__card-benefit">
+                                    <i class="fa-solid fa-check"></i>
+                                    Client CRM
+                                </li>
+                                <li class="pricing__card-benefit">
+                                    <i class="fa-solid fa-check"></i>
+                                    Expense Tracking
+                                </li>
+                                <li class="pricing__card-benefit">
+                                    <i class="fa-solid fa-check"></i>
+                                    Up to 5 Project Collaborators
+                                </li>
+                            </ul>
+                            <button class="pricing__card-btn">Start Free</button>
+                        </article>
+                        <article class="pricing__card">
+                            <h2 class="pricing__card-title">Professional</h2>
+                            <p class="pricing__card-subtitle">Everything a growing independent business needs to thrive.</p>
+                            <div class="pricing__card-price-box">
+                                <div class="pricing__card-price-item">
+                                    <span class="pricing__card-currency">$</span>
+                                    <span class="pricing__card-price">32</span>
+                                    <span class="pricing__card-duration">/month</span>
+                                </div>
+                                <span class="pricing__card-subduration">Billed yearly</span>
+                            </div>
+                            <ul class="pricing__card-benefits">
+                                <li class="pricing__card-benefit">
+                                    <i class="fa-solid fa-check"></i>
+                                    Everything in Starter plus...
+                                </li>
+                                <li class="pricing__card-benefit">
+                                    <i class="fa-solid fa-check"></i>
+                                    Custom Branding
+                                </li>
+                                <li class="pricing__card-benefit">
+                                    <i class="fa-solid fa-check"></i>
+                                    Forms & Questionnaires
+                                </li>
+                                <li class="pricing__card-benefit">
+                                    <i class="fa-solid fa-check"></i>
+                                    Workflow Automations
+                                </li>
+                                <li class="pricing__card-benefit">
+                                    <i class="fa-solid fa-check"></i>
+                                    Client Portal
+                                </li>
+                                <li class="pricing__card-benefit">
+                                    <i class="fa-solid fa-check"></i>
+                                    QuickBooks Integration
+                                </li>
+                                <li class="pricing__card-benefit">
+                                    <i class="fa-solid fa-check"></i>
+                                    Calendly Integration
+                                </li>
+                                <li class="pricing__card-benefit">
+                                    <i class="fa-solid fa-check"></i>
+                                    Zapier Integration
+                                </li>
+                                <li class="pricing__card-benefit">
+                                    <i class="fa-solid fa-check"></i>
+                                    Up to 15 Project Collaborators
+                                </li>
+                            </ul>
+                            <div class="pricing__card-banner">
+                                <p class="pricing__card-banner-text">Most Popular</p>
+                            </div>
+                            <button class="pricing__card-btn">Start Free</button>
+                        </article>
+                        <article class="pricing__card">
+                            <h2 class="pricing__card-title">Business</h2>
+                            <p class="pricing__card-subtitle">The perfect package for small businesses and agencies.</p>
+                            <div class="pricing__card-price-box">
+                                <div class="pricing__card-price-item">
+                                    <span class="pricing__card-currency">$</span>
+                                    <span class="pricing__card-price">52</span>
+                                    <span class="pricing__card-duration">/month</span>
+                                </div>
+                                <span class="pricing__card-subduration">Billed yearly</span>
+                            </div>
+                            <ul class="pricing__card-benefits">
+                                <li class="pricing__card-benefit">
+                                    <i class="fa-solid fa-check"></i>
+                                    Everything in Starter and Professional plus...
+                                </li>
+                                <li class="pricing__card-benefit">
+                                    <i class="fa-solid fa-check"></i>
+                                    Subcontractor Management
+                                </li>
+                                <li class="pricing__card-benefit">
+                                    <i class="fa-solid fa-check"></i>
+                                    Hiring Agreement Templates (1099 contracts)
+                                </li>
+                                <li class="pricing__card-benefit">
+                                    <i class="fa-solid fa-check"></i>
+                                    Subcontractor Onboarding
+                                </li>
+                                <li class="pricing__card-benefit">
+                                    <i class="fa-solid fa-check"></i>
+                                    Talent Pool
+                                </li>
+                                <li class="pricing__card-benefit">
+                                    <i class="fa-solid fa-check"></i>
+                                    3 Team Seats (additional seats $9/month)
+                                </li>
+                                <li class="pricing__card-benefit">
+                                    <i class="fa-solid fa-check"></i>
+                                    Accountant Access
+                                </li>
+                                <li class="pricing__card-benefit">
+                                    <i class="fa-solid fa-check"></i>
+                                    Connect Multiple Bank Accounts
+                                </li>
+                                <li class="pricing__card-benefit">
+                                    <i class="fa-solid fa-check"></i>
+                                    Unlimited Subcontractors
+                                </li>
+                                <li class="pricing__card-benefit">
+                                    <i class="fa-solid fa-check"></i>
+                                    Unlimited Project Collaborators
+                                </li>
+                            </ul>
+                            <button class="pricing__card-btn">Start Free</button>
+                        </article>
+                        <!-- Yearly Card Addons -->
+                        <div class="pricing__card-addons-container">
+                            <h2 class="pricing__card-title pricing__card-title--addons">Customize your workflow with add-ons</h2>
+                            <article class="pricing__card pricing__card--addon">
+                                <div class="pricing__card-left">
+                                    <h3 class="pricing__card-title pricing__card-title--addon">Accounting & Tax Assistant</h3>
+                                    <p class="pricing__card-subtitle pricing__card-subtitle--addon">Manage your freelance finances and always be ready for tax season with easy-to-use accounting and tax tools.</p>
+                                    <a href="#" class="pricing__card-link">Learn More <i class="fa-solid fa-angle-right pricing__card-link-caret"></i></a>
+                                </div>
+                                <div class="pricing__card-right">
+                                    <p class="pricing__card-price pricing__card-price--addon">$100</p>
+                                    <p class="pricing__card-duration pricing__card-duration--addon">/year</p>
+                                </div>
+                            </article>
+                            <article class="pricing__card pricing__card--addon">
+                                <div class="pricing__card-left">
+                                    <h3 class="pricing__card-title pricing__card-title--addon">Partners</h3>
+                                    <p class="pricing__card-subtitle pricing__card-subtitle--addon">Invite other users for full account access and company management.</p>
+                                </div>
+                                <div class="pricing__card-right">
+                                    <p class="pricing__card-price pricing__card-price--addon">$90</p>
+                                    <p class="pricing__card-duration pricing__card-duration--addon">/year</p>
+                                </div>
+                            </article>
+                            <article class="pricing__card pricing__card--addon">
+                                <div class="pricing__card-left">
+                                    <h3 class="pricing__card-title pricing__card-title--addon">Collaborators</h3>
+                                    <p class="pricing__card-subtitle pricing__card-subtitle--addon">Invite other users to specific projects for limited access and functionality.</p>
+                                </div>
+                                <div class="pricing__card-right">
+                                    <p class="pricing__card-price pricing__card-price--addon">Free</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>                    
+                </section>
+                <section class="grow">
+                    <div class="grow__container">
+                        <div class="grow__container-left">
+                            <h2 class="grow__container-left-title">It's <span class="grow__container-left-title--green">your</span> business.<br>
+                                We're here to help it grow.</h2>
+                        </div>
+                        <button class="grow__container-right-btn">Start Free</button>
+                    </div>
+                </section>
+                <section class="faq">
+                    <div class="faq__container">
+                        <h2 class="faq__container-title">Frequently Asked Questions</h2>
+                        <button class="faq__accordian-btn">
+                            <h3 class="faq__accordian-btn-title">How does the free trial work?</h3>
+                            <i class="fa-solid fa-caret-down faq__accordian-btn-caret"></i>
+                        </button>
+                        <div class="faq__accordian-panel">
+                            <p class="faq__accordian-panel-text">When you start your trial with Bonsai you'll receive full, unlimited access to all of Bonsai's Workflow or Workflow Plus Features! You will need to enter your credit card information to begin your trial, but don't worry - we won't charge you anything until the subscription ends! If you wish to cancel at any time during the trial period, you can do so through your Subscriptions Settings Page.</p>
+                        </div>
+                        <button class="faq__accordian-btn">
+                            <h3 class="faq__accordian-btn-title">Can I change plans anytime?</h3>
+                            <i class="fa-solid fa-caret-down faq__accordian-btn-caret"></i>
+                        </button>
+                        <div class="faq__accordian-panel">
+                            <p class="faq__accordian-panel-text">Yes, you can from within your account. If you have already subscribed to a plan, or want to downgrade or upgrade your current one, you can do this by going to your "Settings" and "Subscription".</p>
+                        </div>
+                        <button class="faq__accordian-btn">
+                            <h3 class="faq__accordian-btn-title">How do I pause my Bonsai subscription?</h3>
+                            <i class="fa-solid fa-caret-down faq__accordian-btn-caret"></i>
+                        </button>
+                        <div class="faq__accordian-panel">
+                            <p class="faq__accordian-panel-text">We totally understand that with the nature of freelancing, work ebbs and flows so you might not always need your Bonsai subscription to remain active! The good news is that you can cancel or pause your monthly subscription at any time without penalty. Once cancelled, you'll be able to continue logging in to access all your documents and even continue to use our free features, like Time Tracking! In order to cancel your subscription, login to your Bonsai account.</p>
+                        </div>
+                        <button class="faq__accordian-btn">
+                            <h3 class="faq__accordian-btn-title">What is your refund policy?</h3>
+                            <i class="fa-solid fa-caret-down faq__accordian-btn-caret"></i>
+                        </button>
+                        <div class="faq__accordian-panel">
+                            <p class="faq__accordian-panel-text">If you contact us within 2 weeks of being charged for your subscription, we will be happy to issue a refund for you! Beyond those 2 weeks, you will need to cancel or modify the subscription from the Subscriptions Tab in Settings to avoid future charges, but refunds will not be issued. This applies to both monthly and annual plans.</p>
+                        </div>
+                </section>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__col">
+                    <h2 class="footer__col-title">Product</h2>
+                    <div class="footer__col-row">
+                        <a href="#" class="footer__col-row-link">Proposals</a>
+                        <a href="#" class="footer__col-row-link">Contracts</a>
+                        <a href="#" class="footer__col-row-link">Invoicing</a>
+                        <a href="#" class="footer__col-row-link">Client CRM</a>
+                        <a href="#" class="footer__col-row-link">Time Tracking</a>
+                        <a href="#" class="footer__col-row-link">Task Tracking</a>
+                        <a href="#" class="footer__col-row-link">Forms</a>
+                        <a href="#" class="footer__col-row-link">Accounting</a>
+                        <a href="#" class="footer__col-row-link">Bonsai Tax</a>
+                        <a href="#" class="footer__col-row-link">Bonsai Cash</a>
+                    </div>
+                    <div class="footer__col-row">
+                        <a href="#" class="footer__col-row-link"><span class="footer__col-row-link--green">Pricing</span></a>
+                        <a href="#" class="footer__col-row-link">Bonsai Reviews</a>
+                    </div>
+                </div>
+                <div class="footer__col">
+                    <h2 class="footer__col-title">Free Resources</h2>
+                    <div class="footer__col-row">
+                        <a href="#" class="footer__col-row-link">Freelance Resources</a>
+                        <a href="#" class="footer__col-row-link">Freelance Blog by Bonsai</a>
+                        <a href="#" class="footer__col-row-link">How to Write a Contract</a>
+                        <a href="#" class="footer__col-row-link">Online Signature Maker</a>
+                    </div>
+                    <div class="footer__col-row">
+                        <a href="#" class="footer__col-row-link">Self-Employed Taxes Hub</a>
+                        <a href="#" class="footer__col-row-link">Self-Employed Tax Calculator</a>
+                        <a href="#" class="footer__col-row-link">Self-Employed Tax Deductions</a>
+                    </div>
+                    <div class="footer__col-row">
+                        <p class="footer__col-row-title">Templates</p>
+                        <button 
+                            id="footerMenuButton1"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                            aria-controls="footerMenu1"
+                            class="footer__col-dropdown-btn"
+                        >
+                            Invoice Templates <i class="fa-solid fa-caret-down footer__col-dropdown-icon"></i>
+                        </button>
+                        <ul id="footerMenu1" role="menu" hidden class="footer__col-dropdown-list">
+                            <li class="footer__col-dropdown-list-item"><a href="#" role="menuitem">Invoice Generator</a></li>
+                            <li class="footer__col-dropdown-list-item"><a href="#" role="menuitem">Blank Invoice Template</a></li>
+                            <li class="footer__col-dropdown-list-item"><a href="#" role="menuitem">Consultant Invoice Template</a></li>
+                            <li class="footer__col-dropdown-list-item"><a href="#" role="menuitem">Editable Invoice Template</a></li>
+                            <li class="footer__col-dropdown-list-item"><a href="#" role="menuitem">Graphic Design Invoice</a></li>
+                            <li class="footer__col-dropdown-list-item"><a href="#" role="menuitem">Web Design Invoice</a></li>
+                            <li class="footer__col-dropdown-list-item"><a href="#" role="menuitem">Contractor Invoice Template</a></li>
+                            <li class="footer__col-dropdown-list-item"><a href="#" role="menuitem">Photography Invoice Template</a></li>
+                            <li class="footer__col-dropdown-list-item"><a href="#" role="menuitem">Self Employed Invoice Template</a></li>
+                        </ul>
+    
+                        <button 
+                            id="footerMenuButton2"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                            aria-controls="footerMenu2"
+                            class="footer__col-dropdown-btn"
+                        >
+                            Proposal Templates <i class="fa-solid fa-caret-down footer__col-dropdown-icon"></i>
+                        </button>
+                        <ul id="footerMenu2" role="menu" hidden class="footer__col-dropdown-list">
+                            <li class="footer__col-dropdown-list-item"><a href="#" role="menuitem">Website Proposal Template</a></li>
+                            <li class="footer__col-dropdown-list-item"><a href="#" role="menuitem">Digital Marketing Proposal Template</a></li>
+                            <li class="footer__col-dropdown-list-item"><a href="#" role="menuitem">Social Media Marketing Proposal</a></li>
+                            <li class="footer__col-dropdown-list-item"><a href="#" role="menuitem">Graphic Design Proposal</a></li>
+                            <li class="footer__col-dropdown-list-item"><a href="#" role="menuitem">Freelance Proposal Template</a></li>
+                            <li class="footer__col-dropdown-list-item"><a href="#" role="menuitem">SEO Proposal Template</a></li>
+                        </ul>
+    
+                        <button 
+                            id="footerMenuButton3"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                            aria-controls="footerMenu3"
+                            class="footer__col-dropdown-btn"
+                        >
+                            Contract Templates <i class="fa-solid fa-caret-down footer__col-dropdown-icon"></i>
+                        </button>
+                        <ul id="footerMenu3" role="menu" hidden class="footer__col-dropdown-list">
+                            <li class="footer__col-dropdown-list-item"><a href="#" role="menuitem">Online Contract</a></li>
+                            <li class="footer__col-dropdown-list-item"><a href="#" role="menuitem">Graphic Design Contract</a></li>
+                            <li class="footer__col-dropdown-list-item"><a href="#" role="menuitem">Freelance Contract Template</a></li>
+                            <li class="footer__col-dropdown-list-item"><a href="#" role="menuitem">Social Media Marketing Contract</a></li>
+                            <li class="footer__col-dropdown-list-item"><a href="#" role="menuitem">Software Development Contract</a></li>
+                            <li class="footer__col-dropdown-list-item"><a href="#" role="menuitem">Web Design Contract</a></li>
+                            <li class="footer__col-dropdown-list-item"><a href="#" role="menuitem">Video Production Contract</a></li>
+                            <li class="footer__col-dropdown-list-item"><a href="#" role="menuitem">Public Relations Contract</a></li>
+                            <li class="footer__col-dropdown-list-item"><a href="#" role="menuitem">Translation Contract</a></li>
+                        </ul>
+    
+                        <button 
+                            id="footerMenuButton4"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                            aria-controls="footerMenu4"
+                            class="footer__col-dropdown-btn"
+                        >
+                            Agreement Templates <i class="fa-solid fa-caret-down footer__col-dropdown-icon"></i>
+                        </button>
+                        <ul id="footerMenu4" role="menu" hidden class="footer__col-dropdown-list">
+                            <li class="footer__col-dropdown-list-item"><a href="#" role="menuitem">Retainer Agreement Template</a></li>
+                            <li class="footer__col-dropdown-list-item"><a href="#" role="menuitem">Influencer Agreement Template</a></li>
+                            <li class="footer__col-dropdown-list-item"><a href="#" role="menuitem">Collaboration Agreement Template</a></li>
+                            <li class="footer__col-dropdown-list-item"><a href="#" role="menuitem">Software Development Agreement</a></li>
+                            <li class="footer__col-dropdown-list-item"><a href="#" role="menuitem">Marketing Agreement Template</a></li>
+                        </ul>
+    
+                        <button 
+                            id="footerMenuButton5"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                            aria-controls="footerMenu5"
+                            class="footer__col-dropdown-btn"
+                        >
+                            Scope of Work Templates <i class="fa-solid fa-caret-down footer__col-dropdown-icon"></i>
+                        </button>
+                        <ul id="footerMenu5" role="menu" hidden class="footer__col-dropdown-list">
+                            <li class="footer__col-dropdown-list-item"><a href="#" role="menuitem">Website Development Scope of Work</a></li>
+                            <li class="footer__col-dropdown-list-item"><a href="#" role="menuitem">Digital Marketing Scope of Work</a></li>
+                            <li class="footer__col-dropdown-list-item"><a href="#" role="menuitem">Consultant Statement of Work Template</a></li>
+                            <li class="footer__col-dropdown-list-item"><a href="#" role="menuitem">Software Development Scope of Work</a></li>
+                        </ul>
+    
+                        <button 
+                            id="footerMenuButton6"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                            aria-controls="footerMenu6"
+                            class="footer__col-dropdown-btn"
+                        >
+                            Quote Templates <i class="fa-solid fa-caret-down footer__col-dropdown-icon"></i>
+                        </button>
+                        <ul id="footerMenu6" role="menu" hidden class="footer__col-dropdown-list">
+                            <li class="footer__col-dropdown-list-item"><a href="#" role="menuitem">Freelance Quotation Template</a></li>
+                            <li class="footer__col-dropdown-list-item"><a href="#" role="menuitem">Web Design Quotation Template</a></li>
+                            <li class="footer__col-dropdown-list-item"><a href="#" role="menuitem">Graphic Design Quotation Template</a></li>
+                            <li class="footer__col-dropdown-list-item"><a href="#" role="menuitem">Interior Design Quotation Template</a></li>
+                            <li class="footer__col-dropdown-list-item"><a href="#" role="menuitem">Video Production Quotation Template</a></li>
+                            <li class="footer__col-dropdown-list-item"><a href="#" role="menuitem">Social Media Marketing Quotation</a></li>
+                        </ul>
+    
+                        <a href="#" class="footer__col-row-link">Credit Note Templates</a>
+                        <a href="#" class="footer__col-row-link">Estimate Templates</a>
+                        <a href="#" class="footer__col-row-link">Form Templates</a>
+                    </div>
+                </div>
+                <div class="footer__col">
+                    <h2 class="footer__col-title">Bonsai</h2>
+                    <div class="footer__col-row">
+                        <a href="#" class="footer__col-row-link">About</a>
+                        <a href="#" class="footer__col-row-link">Careers</a>
+                        <a href="#" class="footer__col-row-link">Support</a>
+                        <a href="#" class="footer__col-row-link">LinkedIn</a>
+                        <a href="#" class="footer__col-row-link">Twitter</a>
+                        <a href="#" class="footer__col-row-link">Privacy policy</a>
+                        <a href="#" class="footer__col-row-link">Legal</a>
+                    </div>
+                    <div class="footer__col-row">
+                        <a href="#" class="footer__col-row-link">Affiliates</a>
+                        <a href="#" class="footer__col-row-link">Write for Us</a>
+                    </div>
+                    <button 
+                        id="footerMenuButton7"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                        aria-controls="footerMenu7"
+                        class="footer__col-dropdown-btn"
+                    >
+                        Comparisons <i class="fa-solid fa-caret-down footer__col-dropdown-icon"></i>
+                    </button>
+                    <ul id="footerMenu7" role="menu" hidden class="footer__col-dropdown-list">
+                        <li class="footer__col-dropdown-list-item"><a href="#" role="menuitem">Freshbooks Alternatives</a></li>
+                        <li class="footer__col-dropdown-list-item"><a href="#" role="menuitem">Quickbooks Alternatives</a></li>
+                        <li class="footer__col-dropdown-list-item"><a href="#" role="menuitem">Wave vs Quickbooks</a></li>
+                        <li class="footer__col-dropdown-list-item"><a href="#" role="menuitem">Xero vs Quickbooks</a></li>
+                        <li class="footer__col-dropdown-list-item"><a href="#" role="menuitem">Freshbooks vs Quickbooks</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+</body>
+<script type="text/javascript" src="./js/index.js"></script>
+</html>
